@@ -1,8 +1,8 @@
 services:
-  messages-api:
-    image: harishankarn/payment-messages-api
+  portal:
+    image: harishankarn/open-payments-portal
     build: .
-    container_name: messages-api
+    container_name: portal
     ports:
       - "8080:8080" # Expose port 8080 from the container to the host
     restart: always  # Automatically restart the container if it crashes
