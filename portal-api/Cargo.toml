@@ -1,0 +1,28 @@
+[package]
+name = "portal-api"
+version = "0.2.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 0
+debug = 1
+incremental = true
+codegen-units = 256
+
+[profile.dev.package."*"]
+opt-level = 0
+debug = 0
+
+[dependencies]
+actix-web = "4.9"
+actix-files = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde-xml-rs = "0.6"
+serde_json = "1.0"
+serde_path_to_error = "0.1"
+xml-rs = "0.8"
+open-payments-common = { version = "1.0.9" }
+open-payments-iso20022 = { version = "1.0.9", features = ["pacs", "pain", "head", "camt", "derive_serde"] }
+open-payments-fednow = { version = "1.0.9", features = ["derive_serde"] }
+datalogic-rs = "1.0.10"
+

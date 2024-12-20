@@ -1,0 +1,8 @@
+services:
+  portal:
+    image: openpaymentsengineering/open-payments-portal
+    build: .
+    container_name: portal
+    ports:
+      - "8080:8080" # Expose port 8080 from the container to the host
+    restart: always  # Automatically restart the container if it crashes
